@@ -121,6 +121,4 @@ This project demonstrates key Swift and SwiftUI concepts, including:
 
 ---
 
-## 👤 Authors
 
-Developed as a team project for academic purposes.
