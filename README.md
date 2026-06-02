@@ -1,4 +1,4 @@
-# FinalTaskManager – iOS Task Management Application
+# TaskManager – iOS Task Management Application
 
 ## Overview
 
