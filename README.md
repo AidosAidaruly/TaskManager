@@ -1,124 +1,230 @@
-# FinalTaskManager
+# FinalTaskManager – iOS Task Management Application
 
-FinalTaskManager is a SwiftUI-based iOS application developed as a final project for the Native Mobile Development course.
+## Overview
 
-The application helps users manage their daily tasks by providing full CRUD functionality, modern SwiftUI navigation, local data persistence, and REST API integration.
+FinalTaskManager is a native iOS application developed using SwiftUI and the MVVM architectural pattern. The application helps users organize and manage daily tasks through a modern and intuitive interface while demonstrating key concepts of iOS development, state management, local persistence, and REST API integration.
 
----
+The project was created as a final coursework project for the Native Mobile Development course and focuses on clean architecture, usability, and maintainable code design.
 
-## 📱 Features
+## Key Features
 
-- Create, read, update, and delete tasks (CRUD)
-- Task list with sorting and filtering options
-- Task categories and priorities
-- Form-based UI using SwiftUI components
-- REST API integration for loading task templates
-- Local data persistence using UserDefaults
-- Real-time UI updates with state management
-- Simple animations and adaptive UI layout
+### Task Management
 
----
+* Create tasks
+* View tasks
+* Edit tasks
+* Delete tasks
+* Mark tasks as completed
 
-## 🧱 Architecture
+### Organization Tools
 
-The project follows the **MVVM (Model–View–ViewModel)** architecture:
+* Task categories
+* Priority levels
+* Sorting options
+* Filtering functionality
 
-- **Models** – data structures (TaskItem, Priority, Category)
-- **ViewModels** – business logic and state management
-- **Views** – SwiftUI user interface
-- **Services** – networking and persistence logic
+### Dashboard
 
-This separation ensures clean code structure and easier maintenance.
+* Active task overview
+* Completed task statistics
+* Upcoming task preview
 
----
+### API Integration
 
-## 🧭 Navigation Structure
+* Load task templates from a REST API
+* JSON parsing and decoding
+* Error handling and loading states
 
-The app uses a **TabView** with three main sections:
+### User Experience
 
-1. **Home**
-   - Task summary (active and completed tasks)
-   - Preview of upcoming tasks
+* Modern SwiftUI interface
+* Responsive layouts
+* NavigationStack navigation
+* Tab-based navigation structure
+* Basic UI animations
 
-2. **Tasks**
-   - Full task list using `List` and `Section`
-   - Sorting and filtering options
-   - Create, edit, and delete tasks
-   - API-based task templates
+## Architecture
 
-3. **Settings**
-   - User preferences stored with `UserDefaults`
-   - Simple animation demonstration
+The application follows the MVVM (Model–View–ViewModel) architecture.
 
-Navigation between screens is implemented using `NavigationStack` and `NavigationLink`.
+### Models
 
----
+Responsible for representing application data:
 
-## 🌐 Networking
+* TaskItem
+* Priority
+* Category
 
-The application fetches task templates from a public REST API:
+### ViewModels
 
-- API: https://jsonplaceholder.typicode.com/todos
-- Networking implemented using `URLSession`
-- Includes loading, success, and error states
-- JSON decoding with proper error handling
+Responsible for:
 
----
+* Business logic
+* State management
+* User interactions
+* Data synchronization
 
-## 💾 Data Persistence
+### Views
 
-Local data persistence is implemented using **UserDefaults**:
+Responsible for:
 
-- Tasks are encoded and decoded using `Codable`
-- Full CRUD operations are supported
-- Data is automatically saved after any change
+* User interface
+* Navigation
+* User input
+* Data presentation
 
----
+### Services
 
-## 🛠 Technologies Used
+Responsible for:
 
-- Swift
-- SwiftUI
-- MVVM Architecture
-- URLSession (REST API)
-- UserDefaults
-- Xcode (macOS)
+* Networking
+* Data persistence
+* External API communication
 
----
+This architecture improves code maintainability, scalability, and separation of concerns.
 
-## 📂 Project Structure
+## Navigation Structure
 
+The application uses a TabView-based navigation system.
+
+### Home
+
+Provides:
+
+* Task summary
+* Active tasks count
+* Completed tasks count
+* Upcoming tasks preview
+
+### Tasks
+
+Provides:
+
+* Complete task list
+* Task creation
+* Task editing
+* Task deletion
+* Sorting and filtering
+* API-generated task templates
+
+### Settings
+
+Provides:
+
+* User preferences
+* Local application settings
+* Animation demonstrations
+
+## Technologies Used
+
+### Mobile Development
+
+* Swift
+* SwiftUI
+
+### Architecture
+
+* MVVM Pattern
+
+### Networking
+
+* URLSession
+* JSON Decoding
+
+### Persistence
+
+* UserDefaults
+* Codable
+
+### Development Environment
+
+* Xcode
+* iOS Simulator
+
+## Project Structure
+
+```text
 FinalTaskManager/
-├─ Models/
-├─ ViewModels/
-├─ Services/
-├─ Views/
-├─ App/
-└─ README.md
+├── Models/
+├── ViewModels/
+├── Services/
+├── Views/
+├── App/
+└── README.md
+```
+
+## Data Persistence
+
+The application stores task data locally using UserDefaults.
+
+Features include:
+
+* Automatic data saving
+* Codable serialization
+* Persistent task storage
+* State restoration between launches
+
+## REST API Integration
+
+The application fetches task templates from:
+
+```text
+https://jsonplaceholder.typicode.com/todos
+```
+
+Implemented features:
+
+* Asynchronous networking
+* JSON decoding
+* Loading states
+* Error handling
+* Data mapping
+
+## Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* Native iOS development
+* SwiftUI user interface design
+* MVVM architecture
+* State management
+* REST API integration
+* JSON parsing
+* Local data persistence
+* Navigation systems
+* Mobile application development
+* Clean code organization
+
+## My Contribution
+
+I independently implemented:
+
+* MVVM architecture design
+* SwiftUI user interface
+* CRUD task management functionality
+* State management logic
+* UserDefaults persistence layer
+* REST API integration using URLSession
+* Navigation system
+* Sorting and filtering functionality
+* Error handling mechanisms
+* Responsive mobile layouts
+
+## Future Improvements
+
+* Core Data integration
+* Cloud synchronization
+* User authentication
+* Push notifications
+* Calendar integration
+* Offline-first support
+* Widget support
+* Dark and light themes
+* SwiftData migration
+* App Store deployment
 
 
----
 
-## ▶️ How to Run
+## License
 
-1. Open the project on **macOS** using Xcode
-2. Create a new SwiftUI iOS project in Xcode
-3. Add the provided source files to the project
-4. Select an iOS simulator
-5. Press **Run**
-
----
-
-## 🎓 Educational Purpose
-
-This project demonstrates key Swift and SwiftUI concepts, including:
-
-- State management with `@State`, `@StateObject`, and `@Published`
-- SwiftUI navigation and layout
-- REST API integration
-- Local data persistence
-- Clean architecture and code organization
-
----
-
-
+This project was developed for educational purposes.
